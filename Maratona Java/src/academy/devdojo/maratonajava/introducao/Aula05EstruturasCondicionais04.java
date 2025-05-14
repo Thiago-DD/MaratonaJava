@@ -6,19 +6,22 @@ public class Aula05EstruturasCondicionais04 {
         // de 34713 > 68507 paga 37.35%
         // 68508 pra cima paga 49.50%
 
-        double salario = 70000;
+        double salario = 25000;
         double taxa01 =  9.70 / 100;
         double taxa02 =  37.35 / 100;
         double taxa03 =  49.50 / 100;
+        double valorImposto;
         double salarioFinal;
 
         if (salario <= 34712) {
-            salarioFinal = salario * taxa01;
+            valorImposto = salario * taxa01;
+            salarioFinal = salario - valorImposto;
         }else if (salario >= 34713 && salario <= 68507) {
-            salarioFinal = salario * taxa02;
-
+            valorImposto = salario * taxa02;
+            salarioFinal = salario - valorImposto;
         }else {
-            salarioFinal = salario * taxa03;
+            valorImposto = salario * taxa03;
+            salarioFinal = salario - valorImposto;
         }
 
         System.out.println(salarioFinal);
