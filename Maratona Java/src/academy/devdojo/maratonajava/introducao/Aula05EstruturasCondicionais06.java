@@ -5,9 +5,9 @@ public class Aula05EstruturasCondicionais06 {
         // Utilizando switch e dados os valores de 1 a 7, imprima se é dia útil ou final de semana
         // Considerando 1 como domingo
 
-        byte dia = 3;
+        byte dia = 9;
 
-        switch (dia) {
+       /* switch (dia) {
             case 1:
                 System.out.println("Domingo, final de semana");
                 break;
@@ -31,6 +31,16 @@ public class Aula05EstruturasCondicionais06 {
                 break;
             default:
                 System.out.println("Inválido");
+        }*/
+
+        // Segunda maneira de se fazer
+
+        switch (dia) {
+            case 1, 7 -> System.out.println("Final de Semana");
+
+            case 2, 3, 4, 5, 6 -> System.out.println("Dia útil");
+            default -> System.out.println("Inválido");
         }
+
     }
 }
