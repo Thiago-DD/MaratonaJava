@@ -15,6 +15,9 @@ public class CarroTest01 {
         carro2.modelo = "Carro eletrico";
         carro2.ano = 2025;
 
+        // Objeto em memoria perdido?
+        carro = carro2;
+
         System.out.println("Modelo: " + carro.modelo + " Nome: " + carro.nome + " Ano: " + carro.ano);
         System.out.println("Modelo: " + carro2.modelo + " Nome: " + carro2.nome + " Ano: " + carro2.ano);
 
